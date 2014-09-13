@@ -1,7 +1,38 @@
 Rails.application.routes.draw do
+
   root 'static_pages#index'
   get '/about', to: 'static_pages#about', as: :about
   get '/contact', to: 'static_pages#contact', as: :contact
+
+  get 'outfits/new'
+
+  get 'outfits/create'
+
+  get 'outfits/edit'
+
+  get 'outfits/update'
+
+  get 'outfits/destroy'
+
+  get 'occasions/new'
+
+  get 'occasions/create'
+
+  get 'occasions/edit'
+
+  get 'occasions/update'
+
+  get 'occasions/destroy'
+
+  get 'articles/new'
+
+  get 'articles/create'
+
+  get 'articles/edit'
+
+  get 'articles/update'
+
+  get 'articles/destroy'
 
 end
 
