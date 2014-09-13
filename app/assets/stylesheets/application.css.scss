@@ -15,10 +15,12 @@
  */
 
 body {
-background-image: image-url("modern-closet.jpg");
-background-image: no-repeat;
-background-size: 100%;
+  padding-top: 50px;
+  background-image: image-url("modern-closet.jpg");
+  background-image: no-repeat;
+  background-size: 100%;
 }
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
