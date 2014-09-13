@@ -1,5 +1,6 @@
 class OccasionsController < ApplicationController
   def new
+    
   end
 
   def create
