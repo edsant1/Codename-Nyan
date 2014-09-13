@@ -1,5 +1,6 @@
 class OccasionsController < ApplicationController
   before_action :set_occasion, only: [:edit, :update, :destroy, :show]
+  before_action :create_outfit, only: :show
 
   def new
     @occasion = Occasion.new
@@ -36,6 +37,11 @@ class OccasionsController < ApplicationController
   def destroy
     @occasion.destroy
     redirect_to root_path, notice: "occasion has been deleted"
+  end
+
+  def create_outfit
+    @occasion = Occasion.find(params[:occasion_id])
+    @outfit = @occasion.outfits.new(params[:outfit_id])
   end
 
   private

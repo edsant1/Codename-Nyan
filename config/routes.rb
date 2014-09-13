@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
 
   resources :outfits
-  resources :occasions
+  resources :occasions do
+    post 'outfits', to: "occasions#create_outfit"
+  end
+  resources :articles
   
 
   # get 'outfits/new'
