@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+background-image: image-url("");
+background-image: no-repeat;
+background-position: center;
+}
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
