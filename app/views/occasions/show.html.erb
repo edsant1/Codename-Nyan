@@ -1,0 +1,5 @@
+<h1><%= @occasion.name%></h1>
+
+<%= link_to "edit", edit_occasion_path(@occasion)%>
+
+<%= link_to "destroy", @occasion, method: :delete, data: "are you sure you want to delete?" %>

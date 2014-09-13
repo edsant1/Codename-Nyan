@@ -1,12 +1,24 @@
 class OccasionsController < ApplicationController
-  before_action :set_occasion, only: [:edit, :update, :destroy]
+  before_action :set_occasion, only: [:edit, :update, :destroy, :show]
 
   def new
     @occasion = Occasion.new
   end
 
+  def index
+    @occasion = Occasion.all
+  end
+
+  def show
+  end
+
   def create
     @occasion = Occasion.new(occasion_params)
+    if @occasion.save
+      redirect_to @occasion, notice: "Occasion has been created"
+    else
+      render :new
+    end
 
   end
 
@@ -15,14 +27,15 @@ class OccasionsController < ApplicationController
 
   def update
     if @occasion.update(occasion_params)
-      respond_to.html {redirect_to root_path, notice: "Occasion has been created"}
+      redirect_to @occasion, notice: "Occasion has been updated"
     else
       render :edit
+    end
   end
 
   def destroy
     @occasion.destroy
-    respond_to.html {redirect_to root_path, notice: "occasion has been deleted"
+    redirect_to root_path, notice: "occasion has been deleted"
   end
 
   private
@@ -32,7 +45,7 @@ class OccasionsController < ApplicationController
     end
 
     def set_occasion
-      @occasion = Occasions.find(params[:id])
+      @occasion = Occasion.find(params[:id])
     end
 
 end
