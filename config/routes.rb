@@ -4,35 +4,40 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about', as: :about
   get '/contact', to: 'static_pages#contact', as: :contact
 
-  get 'outfits/new'
 
-  get 'outfits/create'
+  resources :outfits
+  resources :occasions
+  
 
-  get 'outfits/edit'
+  # get 'outfits/new'
 
-  get 'outfits/update'
+  # get 'outfits/create'
 
-  get 'outfits/destroy'
+  # get 'outfits/edit'
 
-  get 'occasions/new'
+  # get 'outfits/update'
 
-  get 'occasions/create'
+  # get 'outfits/destroy'
 
-  get 'occasions/edit'
+  # get 'occasions/new'
 
-  get 'occasions/update'
+  # get 'occasions/create'
 
-  get 'occasions/destroy'
+  # get 'occasions/edit'
 
-  get 'articles/new'
+  # get 'occasions/update'
 
-  get 'articles/create'
+  # get 'occasions/destroy'
 
-  get 'articles/edit'
+  # get 'articles/new'
 
-  get 'articles/update'
+  # get 'articles/create'
 
-  get 'articles/destroy'
+  # get 'articles/edit'
+
+  # get 'articles/update'
+
+  # get 'articles/destroy'
 
 end
 

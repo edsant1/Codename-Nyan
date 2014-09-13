@@ -1,8 +1,10 @@
 class OutfitsController < ApplicationController
   def new
+    @outfit = Outfit.new
   end
 
   def create
+    @outfit = Outfit.new(outfit_params)
   end
 
   def edit
