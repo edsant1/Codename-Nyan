@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  get 'outfits/new'
+
+  get 'outfits/create'
+
+  get 'outfits/edit'
+
+  get 'outfits/update'
+
+  get 'outfits/destroy'
+
+  get 'occasions/new'
+
+  get 'occasions/create'
+
+  get 'occasions/edit'
+
+  get 'occasions/update'
+
+  get 'occasions/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
